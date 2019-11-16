@@ -132,7 +132,7 @@ public abstract class HttpCallback implements StringCallback {
 
     @Override
     public void onFailure(Call call, Request request, IOException e) {
-        LogUtil.d(TAG, "...onFailure...url:" + request.url() + " is error: " + e.toString());
+        LogUtil.d("设备布控", "...onFailure...url:" + request.url() + " is error: " + e.toString());
         if (progressUtil != null) {
             progressUtil.hideProgress(context);
         }

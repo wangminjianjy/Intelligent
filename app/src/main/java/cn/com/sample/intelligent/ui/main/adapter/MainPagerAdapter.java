@@ -1,4 +1,4 @@
-package cn.com.sample.intelligent.ui.main;
+package cn.com.sample.intelligent.ui.main.adapter;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;

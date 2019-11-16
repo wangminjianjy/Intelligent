@@ -57,9 +57,9 @@ public class WebSocketManage {
 
         webSocketClient = new OkHttpClient.Builder()
                 .retryOnConnectionFailure(true)
-                .readTimeout(10, TimeUnit.SECONDS)//设置读取超时时间
-                .writeTimeout(10, TimeUnit.SECONDS)//设置写的超时时间
-                .connectTimeout(10, TimeUnit.SECONDS)//设置连接超时时间
+                .readTimeout(10 * 1000, TimeUnit.SECONDS)           // 设置读取超时时间
+                .writeTimeout(10 * 1000, TimeUnit.SECONDS)          // 设置写的超时时间
+                .connectTimeout(10 * 1000, TimeUnit.SECONDS)        // 设置连接超时时间
                 .build();
 
         WebSocketListener webSocketListener = new WebSocketListener() {

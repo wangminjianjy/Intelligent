@@ -40,40 +40,37 @@ public class HttpModel {
         okHttpClientManager.postAsyn(request, callback);
     }
 
-    public void postNoParams(String funcName, StringCallback callback) {
-        String url = BaseConfig.HOSTURL + "/AppInterface/" + funcName;
-        ArrayMap<String, Object> params = new ArrayMap<>();
-
+    private UBaseRequest getRequest(String funcName, String key, ArrayMap<String, Object> params) {
+        String url = BaseConfig.HOST_URL + "/AppInterface/" + funcName;
         UBaseRequest baseRequest = new UBaseRequest();
-        baseRequest.setKey("post");
+        baseRequest.setKey(key);
         baseRequest.setParams(params);
         baseRequest.setUrl(url);
+        return baseRequest;
+    }
+
+    public void postNoParams(String funcName, StringCallback callback) {
+        ArrayMap<String, Object> params = new ArrayMap<>();
+
+        UBaseRequest baseRequest = getRequest(funcName, "post", params);
         getData(baseRequest, callback);
     }
 
     public void binding(String funcName, String phoneCode, String keyCode, String factoryID, StringCallback callback) {
-        String url = BaseConfig.HOSTURL + "/AppInterface/" + funcName;
         ArrayMap<String, Object> params = new ArrayMap<>();
         params.put("PhoneCode", phoneCode);
         params.put("RegCode", keyCode);
         params.put("ID_Factory", factoryID);
 
-        UBaseRequest baseRequest = new UBaseRequest();
-        baseRequest.setKey("binding");
-        baseRequest.setParams(params);
-        baseRequest.setUrl(url);
+        UBaseRequest baseRequest = getRequest(funcName, "binding", params);
         getData(baseRequest, callback);
     }
 
     public void untying(String funcName, String phoneCode, StringCallback callback) {
-        String url = BaseConfig.HOSTURL + "/AppInterface/" + funcName;
         ArrayMap<String, Object> params = new ArrayMap<>();
         params.put("PhoneCode", phoneCode);
 
-        UBaseRequest baseRequest = new UBaseRequest();
-        baseRequest.setKey("untying");
-        baseRequest.setParams(params);
-        baseRequest.setUrl(url);
+        UBaseRequest baseRequest = getRequest(funcName, "untying", params);
         getData(baseRequest, callback);
     }
 }

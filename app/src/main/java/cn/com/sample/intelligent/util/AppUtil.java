@@ -13,6 +13,8 @@ import com.tbruyelle.rxpermissions2.RxPermissions;
 
 import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Method;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
 
 /**
  * Description:
@@ -76,6 +78,39 @@ public class AppUtil {
     public static int getWindowHeight(Context context) {
         return ((WindowManager) context.getSystemService(Context.WINDOW_SERVICE))
                 .getDefaultDisplay().getHeight();
+    }
+
+    /**
+     * URLEncoder编码
+     */
+    public static String toURLEncoded(String paramString) {
+        if (paramString == null || paramString.equals("")) {
+            return "";
+        }
+        try {
+            String str = new String(paramString.getBytes(), "UTF-8");
+            str = URLEncoder.encode(str, "UTF-8");
+            return str;
+        } catch (Exception localException) {
+        }
+        return "";
+    }
+
+    /**
+     * URLDecoder解码
+     */
+    public static String toURLDecoder(String paramString) {
+        if (paramString == null || paramString.equals("")) {
+            return "";
+        }
+        try {
+            String url = new String(paramString.getBytes(), "UTF-8");
+            url = URLDecoder.decode(url, "UTF-8");
+            return url;
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        return "";
     }
 
     /**

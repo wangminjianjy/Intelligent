@@ -5,6 +5,7 @@ import android.app.Application;
 import android.content.Context;
 import android.os.Bundle;
 
+import cn.com.sample.intelligent.base.okhttp.WebSocketManage;
 import cn.com.sample.intelligent.util.LogUtil;
 
 /**
@@ -34,38 +35,38 @@ public class CustomApplication extends Application {
 
         @Override
         public void onActivityCreated(Activity activity, Bundle savedInstanceState) {
-            LogUtil.d(TAG, "...onActivityCreated..." + activity.getLocalClassName());
+            LogUtil.d("设备布控", "...onActivityCreated..." + activity.getLocalClassName());
         }
 
         @Override
         public void onActivityStarted(Activity activity) {
-            LogUtil.d(TAG, "...onActivityStarted..." + activity.getLocalClassName());
+            LogUtil.d("设备布控", "...onActivityStarted..." + activity.getLocalClassName());
             mCurrentActivity = activity;
         }
 
         @Override
         public void onActivityResumed(Activity activity) {
-            LogUtil.d(TAG, "...onActivityResumed..." + activity.getLocalClassName());
+            LogUtil.d("设备布控", "...onActivityResumed..." + activity.getLocalClassName());
         }
 
         @Override
         public void onActivityPaused(Activity activity) {
-            LogUtil.d(TAG, "...onActivityPaused..." + activity.getLocalClassName());
+            LogUtil.d("设备布控", "...onActivityPaused..." + activity.getLocalClassName());
         }
 
         @Override
         public void onActivityStopped(Activity activity) {
-            LogUtil.d(TAG, "...onActivityStopped..." + activity.getLocalClassName());
+            LogUtil.d("设备布控", "...onActivityStopped..." + activity.getLocalClassName());
         }
 
         @Override
         public void onActivitySaveInstanceState(Activity activity, Bundle outState) {
-            LogUtil.d(TAG, "...onActivitySaveInstanceState..." + activity.getLocalClassName());
+            LogUtil.d("设备布控", "...onActivitySaveInstanceState..." + activity.getLocalClassName());
         }
 
         @Override
         public void onActivityDestroyed(Activity activity) {
-            LogUtil.d(TAG, "...onActivityDestroyed..." + activity.getLocalClassName());
+            LogUtil.d("设备布控", "...onActivityDestroyed..." + activity.getLocalClassName());
         }
     };
 }

@@ -18,6 +18,9 @@
     <string name="hint_download_fail">文件下载失败，请稍后重试</string>
     <string name="hint_download_exception">文件下载异常，请稍后重试</string>
     <string name="hint_download_connect">FTP连接失败，请稍后重试</string>
+    <string name="hint_socket_retry">""消息中心未连接，尝试重连"</string>
+    <string name="hint_socket_close">"正常关闭消息中心连接"</string>
+    <string name="hint_socket_open">"连接至消息中心"</string>
 
     <!-- 启动页 -->
     <string name="splash_title">欢迎使用</string>
@@ -33,12 +36,13 @@
     <string name="login_binding">绑定</string>
 
     <!-- 主页 -->
-    <string name="main_menu_control">设备布控</string>
+    <string name="main_menu_control">"设备布控"</string>
     <string name="main_menu_report">报表查询</string>
     <string name="main_menu_my">个人信息</string>
 
-    <!-- 设备布控 -->
-    <string name="control_title">设备布控</string>
+    <!-- "设备布控" -->
+    <string name="control_title">"设备布控"</string>
+    <string name="control_null_hint">"该库房暂无实时数据"</string>
 
     <!-- 报表查询 -->
     <string name="report_title">报表查询</string>

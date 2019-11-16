@@ -7,7 +7,8 @@ package cn.com.sample.intelligent.base;
  */
 public class BaseConfig {
 
-    public static final String HOSTURL = "http://192.168.43.16:59949";
+    public static final String HOST_URL = "http://192.168.43.16:59949";
+    public static final String HOST_WEBSOCKET = "ws://39.108.167.116:9090";
 
     // 数据返回值
     public static final String CODE = "Code";                           // 返回数据值

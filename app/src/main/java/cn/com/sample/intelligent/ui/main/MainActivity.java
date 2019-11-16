@@ -12,6 +12,7 @@ import java.util.List;
 
 import cn.com.sample.intelligent.R;
 import cn.com.sample.intelligent.base.BaseActivity;
+import cn.com.sample.intelligent.ui.main.adapter.MainPagerAdapter;
 import cn.com.sample.intelligent.widget.AlarmRadioButton;
 import cn.com.sample.intelligent.widget.CustomViewPager;
 
