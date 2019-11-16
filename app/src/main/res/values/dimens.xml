@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- default -->
+    <dimen name="divider_line_height">1dp</dimen>
+    <dimen name="divider_line_height1">2dp</dimen>
+
+    <dimen name="shape_corner_small">4dp</dimen>
+    <dimen name="shape_corner_normal">8dp</dimen>
+    <dimen name="shape_stroke_small">1dp</dimen>
+
+    <dimen name="toolbar_min_height">43dp</dimen>
+
+    <!-- padding -->
+    <dimen name="view_padding_1">1dp</dimen>
+    <dimen name="view_padding_2">2dp</dimen>
+    <dimen name="view_padding_5">5dp</dimen>
+    <dimen name="view_padding_10">10dp</dimen>
+    <dimen name="view_padding_15">15dp</dimen>
+    <dimen name="view_padding_20">20dp</dimen>
+
+    <!-- margin -->
+    <dimen name="view_margin_1">1dp</dimen>
+    <dimen name="view_margin_2">2dp</dimen>
+    <dimen name="view_margin_3">3dp</dimen>
+    <dimen name="view_margin_4">4dp</dimen>
+    <dimen name="view_margin_5">5dp</dimen>
+    <dimen name="view_margin_6">6dp</dimen>
+    <dimen name="view_margin_8">8dp</dimen>
+    <dimen name="view_margin_10">10dp</dimen>
+    <dimen name="view_margin_12">12dp</dimen>
+    <dimen name="view_margin_15">15dp</dimen>
+    <dimen name="view_margin_20">20dp</dimen>
+    <dimen name="view_margin_30">30dp</dimen>
+    <dimen name="view_margin_40">40dp</dimen>
+    <dimen name="view_margin_50">50dp</dimen>
+    <dimen name="view_margin_60">60dp</dimen>
+    <dimen name="view_margin_80">80dp</dimen>
+    <dimen name="view_margin_100">100dp</dimen>
+    <dimen name="view_margin_120">120dp</dimen>
+    <dimen name="view_margin_130">130dp</dimen>
+
+    <!-- textSize -->
+    <dimen name="text_size_8">8sp</dimen>
+    <dimen name="text_size_10">10sp</dimen>
+    <dimen name="text_size_12">12sp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="text_size_15">15sp</dimen>
+    <dimen name="text_size_16">16sp</dimen>
+    <dimen name="text_size_17">17sp</dimen>
+    <dimen name="text_size_20">20sp</dimen>
+    <dimen name="text_size_24">24sp</dimen>
+    <dimen name="text_size_30">30sp</dimen>
+    <dimen name="text_size_32">32sp</dimen>
+
+    <!-- height and width -->
+    <dimen name="view_height_1">1dp</dimen>
+    <dimen name="view_height_2">2dp</dimen>
+    <dimen name="view_height_5">5dp</dimen>
+    <dimen name="view_height_10">10dp</dimen>
+    <dimen name="view_height_15">15dp</dimen>
+    <dimen name="view_height_20">20dp</dimen>
+    <dimen name="view_height_30">30dp</dimen>
+    <dimen name="view_height_40">40dp</dimen>
+    <dimen name="view_height_50">50dp</dimen>
+    <dimen name="view_height_60">60dp</dimen>
+    <dimen name="view_height_100">100dp</dimen>
+    <dimen name="view_height_150">150dp</dimen>
+    <dimen name="view_height_167">167dp</dimen>
+    <dimen name="view_height_170">170dp</dimen>
+    <dimen name="view_height_200">200dp</dimen>
+    <dimen name="view_height_220">220dp</dimen>
+    <dimen name="view_height_250">250dp</dimen>
+    <dimen name="view_height_300">300dp</dimen>
+    <dimen name="view_height_400">400dp</dimen>
+    <dimen name="view_height_600">600dp</dimen>
+</resources>

@@ -1,3 +1,57 @@
-<resources>
-    <string name="app_name">Intelligent</string>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">智慧档案</string>
+
+    <string name="hint_waiting">请稍后</string>
+    <string name="btn_submit">确定</string>
+    <string name="btn_cancel">取消</string>
+    <string name="action_next">下一步</string>
+    <string name="hint_net_error">请求服务器失败，请检查网络</string>
+    <string name="hint_exception">请求服务器方法返回异常!</string>
+    <string name="hint_permission">权限未全部开放，请开放读取设备信息权限！</string>
+    <string name="hint_update_title">APP有新的版本，是否更新？</string>
+    <string name="hint_update_no_use">您的APP版本为最新版本，无需更新。</string>
+    <string name="hint_update_permission">新的版本已更新，但您的存储权限暂未开启，如需更新，请打开权限后，到设置界面点击版本信息进行更新！</string>
+    <string name="hint_net_wifi">请打开手机wifi功能！</string>
+    <string name="hint_data_null">暂无数据</string>
+    <string name="hint_text_null">———</string>
+    <string name="hint_download">正在下载，请稍后</string>
+    <string name="hint_download_fail">文件下载失败，请稍后重试</string>
+    <string name="hint_download_exception">文件下载异常，请稍后重试</string>
+    <string name="hint_download_connect">FTP连接失败，请稍后重试</string>
+
+    <!-- 启动页 -->
+    <string name="splash_title">欢迎使用</string>
+    <string name="splash_content">智慧档案手机终端</string>
+    <string name="hint_splash_time">跳过(<xliff:g>%1$s</xliff:g>)</string>
+
+    <!-- 登录 -->
+    <string name="login_title">库区绑定</string>
+    <string name="login_storage_title">库区选择</string>
+    <string name="login_storage_hint">请选择库区</string>
+    <string name="login_key_hint">请输入验证编码</string>
+    <string name="login_key_error">验证编码有误，请重新输入</string>
+    <string name="login_binding">绑定</string>
+
+    <!-- 主页 -->
+    <string name="main_menu_control">设备布控</string>
+    <string name="main_menu_report">报表查询</string>
+    <string name="main_menu_my">个人信息</string>
+
+    <!-- 设备布控 -->
+    <string name="control_title">设备布控</string>
+
+    <!-- 报表查询 -->
+    <string name="report_title">报表查询</string>
+
+    <!-- 个人信息 -->
+    <string name="my_title">个人信息</string>
+    <string name="my_content">欢迎使用智慧档案手机终端</string>
+    <string name="my_cache">清除缓存</string>
+    <string name="my_version">版本信息</string>
+    <string name="my_cache_sum">0.00 MB</string>
+    <string name="my_version_num">1.0.1</string>
+    <string name="my_hint_cache_clear">成功清除缓存数据</string>
+    <string name="my_hint_exit">确定解除绑定？</string>
+    <string name="my_hint_clear_cache">确定清除缓存数据？</string>
+    <string name="my_quit">解除绑定</string>
 </resources>

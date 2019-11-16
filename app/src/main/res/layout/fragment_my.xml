@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBgWindow"
+    android:orientation="vertical"
+    tools:context=".ui.main.MyFragment">
+
+    <include layout="@layout/toolbar_custom" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBgWindow"
+        android:fadingEdge="none"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/view_height_100"
+                android:layout_height="@dimen/view_height_100"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/view_margin_60"
+                android:src="@drawable/my_img" />
+
+            <TextView
+                android:id="@+id/my_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/view_margin_10"
+                android:gravity="center"
+                android:padding="@dimen/view_padding_10"
+                android:text="济南市"
+                android:textColor="@color/colorNormal"
+                android:textSize="@dimen/text_size_17"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/view_margin_10"
+                android:gravity="center"
+                android:padding="@dimen/view_padding_10"
+                android:text="@string/my_content"
+                android:textColor="@color/colorNormal"
+                android:textSize="@dimen/text_size_20"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/view_margin_30"
+                android:background="@color/colorWhite"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/my_cache"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/view_margin_15">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/my_cache"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_size_15" />
+
+                    <TextView
+                        android:id="@+id/my_cache_sum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/my_cache_sum"
+                        android:textColor="@color/colorTextGray1"
+                        android:textSize="@dimen/text_size_15" />
+                </LinearLayout>
+
+                <include layout="@layout/view_divider_line" />
+
+                <LinearLayout
+                    android:id="@+id/my_version"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/view_margin_15">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/my_version"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_size_15" />
+
+                    <TextView
+                        android:id="@+id/my_version_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/my_version_num"
+                        android:textColor="@color/colorTextGray1"
+                        android:textSize="@dimen/text_size_15" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/my_quit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/view_margin_20"
+                android:layout_marginTop="@dimen/view_margin_50"
+                android:layout_marginRight="@dimen/view_margin_20"
+                android:background="@drawable/shape_btn_circle"
+                android:gravity="center"
+                android:padding="@dimen/view_padding_10"
+                android:text="@string/my_quit"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_size_20" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AlarmRadioButton">
+        <attr name="signLocation">
+            <enum name="left_top" value="1" />
+            <enum name="right_top" value="2" />
+            <enum name="left_bottom" value="3" />
+            <enum name="right_bottom" value="4" />
+        </attr>
+        <attr name="signType">
+            <enum name="point" value="1" />
+            <enum name="number" value="2" />
+        </attr>
+
+        <attr name="signHeight" format="dimension" />
+        <attr name="signWidth" format="dimension" />
+        <attr name="signMargin" format="dimension" />
+        <attr name="signMarginRight" format="dimension" />
+        <attr name="signMarginLeft" format="dimension" />
+        <attr name="signMarginTop" format="dimension" />
+        <attr name="signMarginBottom" format="dimension" />
+        <attr name="signColor" format="color" />
+        <attr name="signTextColor" format="color" />
+        <attr name="signTextSize" format="dimension" />
+        <attr name="signText" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleLoaderView">
+        <attr name="circleLineStrokeWidth" format="integer" />
+        <attr name="titleTextStrokeWidth" format="integer" />
+        <attr name="contentTextStrokeWidth" format="integer" />
+        <attr name="titleSize" format="dimension" />
+        <attr name="contentSize" format="dimension" />
+        <attr name="titleColor" format="color" />
+        <attr name="contentColor" format="color" />
+        <attr name="fillColor" format="color" />
+        <attr name="backgroundCircleColor" format="color" />
+        <attr name="foregroundCircleColor" format="color" />
+        <attr name="centerContent" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="WaveView">
+        <!--波浪颜色-->
+        <attr name="waveColor" format="reference" />
+        <!--波长-->
+        <attr name="waveLength" format="dimension" />
+        <!--波峰高度-->
+        <attr name="waveHeight" format="dimension" />
+        <!--在波浪上的图片-->
+        <attr name="upBitmap" format="reference" />
+        <!--在波浪上的图片颜色-->
+        <attr name="upBitmapTint" format="reference" />
+        <!--波浪初始高度-->
+        <attr name="originY" format="dimension" />
+    </declare-styleable>
+</resources>

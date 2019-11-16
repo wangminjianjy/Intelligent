@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_alert_dialog"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/title_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/view_margin_20"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/dialog_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/view_margin_20"
+            android:gravity="center"
+            android:paddingTop="@dimen/view_margin_20"
+            android:paddingBottom="@dimen/view_margin_20"
+            android:textColor="@color/colorTextBlack"
+            android:textSize="@dimen/text_size_17" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_line_height"
+            android:background="@color/colorDivider" />
+
+        <LinearLayout
+            android:id="@+id/dialog_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/dialog_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:text="@string/btn_cancel"
+                android:textColor="@color/colorDialogBtn"
+                android:textSize="@dimen/text_size_15" />
+
+            <View
+                android:layout_width="@dimen/divider_line_height"
+                android:layout_height="match_parent"
+                android:background="@color/colorDivider" />
+
+            <Button
+                android:id="@+id/dialog_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:text="@string/btn_submit"
+                android:textColor="@color/colorBtn"
+                android:textSize="@dimen/text_size_15" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dialog_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/dialog_return"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:text="@string/btn_submit"
+                android:textColor="@color/colorBtn"
+                android:textSize="@dimen/text_size_15" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

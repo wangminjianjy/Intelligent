@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/radio_bar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <cn.com.sample.intelligent.widget.AlarmRadioButton
+        android:id="@+id/tab_menu_control"
+        style="@style/style_main_bottom_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/selector_menu_control"
+        android:drawablePadding="@dimen/view_margin_3"
+        android:gravity="center"
+        android:text="@string/main_menu_control"
+        app:signColor="@color/colorAlarm"
+        app:signLocation="right_top"
+        app:signMarginBottom="@dimen/view_margin_4"
+        app:signMarginLeft="@dimen/view_margin_20"
+        app:signMarginRight="@dimen/view_margin_20"
+        app:signMarginTop="@dimen/view_margin_4"
+        app:signType="point"
+        app:signWidth="@dimen/view_margin_8" />
+
+    <cn.com.sample.intelligent.widget.AlarmRadioButton
+        android:id="@+id/tab_menu_report"
+        style="@style/style_main_bottom_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/selector_menu_report"
+        android:drawablePadding="@dimen/view_margin_3"
+        android:gravity="center"
+        android:text="@string/main_menu_report"
+        app:signColor="@color/colorAlarm"
+        app:signLocation="right_top"
+        app:signMarginBottom="@dimen/view_margin_4"
+        app:signMarginLeft="@dimen/view_margin_20"
+        app:signMarginRight="@dimen/view_margin_20"
+        app:signMarginTop="@dimen/view_margin_4"
+        app:signType="point"
+        app:signWidth="@dimen/view_margin_8" />
+
+    <cn.com.sample.intelligent.widget.AlarmRadioButton
+        android:id="@+id/tab_menu_my"
+        style="@style/style_main_bottom_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/selector_menu_my"
+        android:drawablePadding="@dimen/view_margin_3"
+        android:gravity="center"
+        android:text="@string/main_menu_my"
+        app:signColor="@color/colorAlarm"
+        app:signLocation="right_top"
+        app:signMarginBottom="@dimen/view_margin_4"
+        app:signMarginLeft="@dimen/view_margin_20"
+        app:signMarginRight="@dimen/view_margin_20"
+        app:signMarginTop="@dimen/view_margin_4"
+        app:signType="point"
+        app:signWidth="@dimen/view_margin_8" />
+</RadioGroup>

@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">#2373AE</color>
+    <color name="colorPrimaryDark">#2373AE</color>
+    <color name="colorAccent">#2373AE</color>
+
+    <color name="colorNormal">#2373AE</color>
+    <color name="colorNormalDeep">#338FFF</color>
+    <color name="colorStatusBar">#2373AE</color>
+    <color name="colorBgToolBar">#2373AE</color>
+
+    <!--半透明白色-->
+    <color name="color_half_white">#B0FFFFFF</color>
+    <!--半透明色-->
+    <color name="color_half_null">#60000000</color>
+    <!--透明色-->
+    <color name="color_null">#00000000</color>
+
+    <color name="colorBlack">#000000</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorWhite1">#E0E0E0</color>
+    <color name="colorRed">#FF0000</color>
+    <color name="colorGray">#808080</color>
+    <color name="colorTextGray">#666666</color>
+    <color name="colorTextGray1">#999999</color>
+    <color name="colorTextGray2">#AAAAAA</color>
+    <color name="colorBgWindow">#F3F3F4</color>
+    <color name="colorTextBlack">#333333</color>
+    <color name="colorTextBlack1">#1B1B1B</color>
+    <color name="colorDivider">#EEEEEE</color>
+    <color name="colorDividerDark1">#DDDDDD</color>
+    <color name="colorBottomDate">#FCFCFC</color>
+    <color name="colorDialogBtn">#999999</color>
+    <color name="colorBtn">#00B2F9</color>
+    <color name="colorInputHint">#878787</color>
+    <color name="colorTextHint">#EFEFEF</color>
+    <color name="colorAlarm">#FD0717</color>
+    <color name="colorDividerDark">#CCCCCC</color>
 </resources>

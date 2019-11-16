@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/img_splash"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorNormal"
+    android:orientation="vertical"
+    tools:context=".ui.login.SplashActivity">
+
+    <TextView
+        android:id="@+id/tv_second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|top"
+        android:layout_margin="@dimen/view_height_20"
+        android:background="@drawable/shape_splash"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_size_12" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/view_height_150"
+            android:layout_height="@dimen/view_height_150"
+            android:layout_gravity="center"
+            android:background="@drawable/logo" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/view_margin_100"
+            android:gravity="center"
+            android:text="@string/splash_title"
+            android:textColor="@color/color_half_white"
+            android:textSize="@dimen/text_size_32" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/view_margin_10"
+            android:layout_marginBottom="@dimen/view_margin_50"
+            android:gravity="center"
+            android:text="@string/splash_content"
+            android:textColor="@color/color_half_white"
+            android:textSize="@dimen/text_size_30" />
+    </LinearLayout>
+</FrameLayout>

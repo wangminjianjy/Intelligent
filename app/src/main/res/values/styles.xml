@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -6,6 +6,53 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppNormalTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:actionBarStyle">@style/AppNormalTheme.AppBarOverlay</item>
+        <item name="toolbarStyle" tools:ignore="NewApi">@style/MyToolBar</item>
+        <item name="android:fitsSystemWindows">false</item>
+    </style>
+
+    <style name="AppFullTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@color/color_null</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="AppNormalTheme.AppBarOverlay" parent="Theme.AppCompat.Light.NoActionBar" />
+
+    <style name="MyToolBar" parent="Widget.AppCompat.Toolbar">
+        <!--左边边距-->
+        <item name="contentInsetStart">0dp</item>
+    </style>
+
+    <!--toolbar style-->
+    <style name="style_view_bar_padding">
+        <item name="android:paddingLeft">@dimen/view_margin_8</item>
+        <item name="android:paddingRight">@dimen/view_margin_8</item>
+        <item name="android:minHeight">@dimen/toolbar_min_height</item>
+    </style>
+
+    <!--底部导航栏-->
+    <style name="style_main_bottom_bar">
+        <item name="android:paddingBottom">@dimen/view_margin_8</item>
+        <item name="android:paddingTop">@dimen/view_margin_6</item>
+        <item name="android:layout_gravity">bottom</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center_horizontal|bottom</item>
+        <item name="android:textColor">@drawable/color_bottom_menu</item>
+        <item name="android:textSize">@dimen/text_size_10</item>
+    </style>
+
+    <style name="style_anim_pop_bottom" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/anim_pop_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/anim_pop_bottom_out</item>
     </style>
 
 </resources>
