@@ -42,8 +42,8 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:gravity="center"
-            android:padding="@dimen/view_margin_6"
+            android:padding="@dimen/view_margin_10"
             android:textColor="@drawable/color_checked_toolbar"
-            android:textSize="@dimen/text_size_14" />
+            android:textSize="@dimen/text_size_16" />
     </RelativeLayout>
 </androidx.appcompat.widget.Toolbar>

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.main.ControlFragment">
+    tools:context=".ui.main.control.ControlActivity">
 
     <include layout="@layout/toolbar_custom" />
 
@@ -70,7 +71,8 @@
                             <LinearLayout
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="4">
+                                android:layout_weight="4"
+                                android:paddingLeft="@dimen/view_margin_10">
 
                                 <TextView
                                     android:id="@+id/param_wendu"
@@ -121,12 +123,12 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="2"
                                 android:gravity="right"
-                                android:text="甲        醛:"
+                                android:text="二氧化碳:"
                                 android:textColor="@color/colorWhite"
                                 android:textSize="@dimen/text_size_15" />
 
                             <TextView
-                                android:id="@+id/param_jiaquan"
+                                android:id="@+id/param_co"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="2"
@@ -138,17 +140,17 @@
                             <TextView
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
+                                android:layout_weight="2"
                                 android:gravity="right"
-                                android:text="苯:"
+                                android:text="甲        醛:"
                                 android:textColor="@color/colorWhite"
                                 android:textSize="@dimen/text_size_15" />
 
                             <TextView
-                                android:id="@+id/param_ben"
+                                android:id="@+id/param_jiaquan"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="5"
+                                android:layout_weight="4"
                                 android:paddingLeft="@dimen/view_margin_10"
                                 android:text="0.0"
                                 android:textColor="@color/colorWhite"
@@ -183,17 +185,17 @@
                             <TextView
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
+                                android:layout_weight="2"
                                 android:gravity="right"
-                                android:text="CO₂:"
+                                android:text="苯:"
                                 android:textColor="@color/colorWhite"
                                 android:textSize="@dimen/text_size_15" />
 
                             <TextView
-                                android:id="@+id/param_co"
+                                android:id="@+id/param_ben"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="5"
+                                android:layout_weight="4"
                                 android:paddingLeft="@dimen/view_margin_10"
                                 android:text="0.0"
                                 android:textColor="@color/colorWhite"
@@ -208,6 +210,19 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/control_air"
+                            android:layout_width="@dimen/view_height_60"
+                            android:layout_height="@dimen/view_height_60"
+                            android:layout_gravity="right|top"
+                            android:layout_marginTop="@dimen/view_margin_40"
+                            android:layout_marginRight="@dimen/view_margin_10"
+                            android:background="@drawable/shape_text_circle"
+                            android:gravity="center"
+                            android:text="良"
+                            android:textColor="@color/colorNormal"
+                            android:textSize="@dimen/text_size_30" />
+
+                        <TextView
                             android:id="@+id/control_storage"
                             android:layout_width="@dimen/view_height_50"
                             android:layout_height="@dimen/view_height_50"
@@ -216,7 +231,8 @@
                             android:background="@drawable/shape_text_circle"
                             android:gravity="center"
                             android:text="库房\n列表"
-                            android:textSize="@dimen/text_size_15" />
+                            android:textSize="@dimen/text_size_15"
+                            android:visibility="gone" />
 
                         <ImageView
                             android:id="@+id/control_alert"
@@ -508,7 +524,8 @@
                 android:layout_marginTop="@dimen/view_margin_10"
                 android:layout_marginRight="@dimen/view_margin_10"
                 android:background="@drawable/shape_text"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:visibility="gone">
 
                 <TextView
                     android:layout_width="match_parent"

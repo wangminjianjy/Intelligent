@@ -59,6 +59,7 @@
     <dimen name="view_height_10">10dp</dimen>
     <dimen name="view_height_15">15dp</dimen>
     <dimen name="view_height_20">20dp</dimen>
+    <dimen name="view_height_25">25dp</dimen>
     <dimen name="view_height_30">30dp</dimen>
     <dimen name="view_height_40">40dp</dimen>
     <dimen name="view_height_50">50dp</dimen>

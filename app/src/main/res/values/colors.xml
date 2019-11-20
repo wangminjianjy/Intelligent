@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#2373AE</color>
-    <color name="colorPrimaryDark">#2373AE</color>
-    <color name="colorAccent">#2373AE</color>
+    <color name="colorPrimary">#5298fd</color>
+    <color name="colorPrimaryDark">#5298fd</color>
+    <color name="colorAccent">#5298fd</color>
 
-    <color name="colorNormal">#2373AE</color>
+    <color name="colorNormal">#5298fd</color>
     <color name="colorNormalDeep">#338FFF</color>
-    <color name="colorStatusBar">#2373AE</color>
-    <color name="colorBgToolBar">#2373AE</color>
+    <color name="colorStatusBar">#5298fd</color>
+    <color name="colorBgToolBar">#5298fd</color>
+    <color name="colorBgLogin">#2373AE</color>
 
     <!--半透明白色-->
     <color name="color_half_white">#B0FFFFFF</color>

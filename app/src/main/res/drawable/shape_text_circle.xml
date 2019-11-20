@@ -2,7 +2,7 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- solid 设置stroke设置的边框以内的颜色 -->
-    <solid android:color="@color/colorTextGray2" />
+    <solid android:color="@color/colorWhite1" />
 
     <!-- stroke主要设置组件的边框。width为边框宽度，color为边框颜色 -->
     <stroke

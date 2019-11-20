@@ -7,7 +7,7 @@ package cn.com.sample.intelligent.base;
  */
 public class BaseConfig {
 
-    public static final String HOST_URL = "http://192.168.43.16:59949";
+    public static final String HOST_URL = "http://39.108.167.116:9091";
     public static final String HOST_WEBSOCKET = "ws://39.108.167.116:9090";
 
     // 数据返回值
@@ -18,4 +18,7 @@ public class BaseConfig {
     public static final int NETWORK_READ_TIMEOUT = 30 * 1000;            // 读取超时时间
     public static final int NETWORK_CONNECT_TIMEOUT = 30 * 1000;         // 连接超时时间
     public static final int NETWORK_WRITE_TIMEOUT = 30 * 1000;           // 写入超时时间
+
+    public static final String PARAM_STORAGE_DATA = "PARAM_STORAGE_DATA";
+    public static final String PARAM_STORAGE = "PARAM_STORAGE";
 }

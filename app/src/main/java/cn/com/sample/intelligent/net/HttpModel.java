@@ -60,7 +60,7 @@ public class HttpModel {
         ArrayMap<String, Object> params = new ArrayMap<>();
         params.put("PhoneCode", phoneCode);
         params.put("RegCode", keyCode);
-        params.put("ID_Factory", factoryID);
+//        params.put("ID_Factory", factoryID);
 
         UBaseRequest baseRequest = getRequest(funcName, "binding", params);
         getData(baseRequest, callback);

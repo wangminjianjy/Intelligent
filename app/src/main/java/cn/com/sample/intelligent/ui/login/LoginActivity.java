@@ -17,6 +17,7 @@ import androidx.core.content.ContextCompat;
 import com.google.gson.Gson;
 
 import org.json.JSONArray;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -60,14 +61,14 @@ public class LoginActivity extends BaseActivity {
 
     @Override
     protected void initView(View contentView) {
-        tvStorage = contentView.findViewById(R.id.storage_name);
+//        tvStorage = contentView.findViewById(R.id.storage_name);
         etKey = contentView.findViewById(R.id.key_code);
         tvBind = contentView.findViewById(R.id.login_binding);
     }
 
     @Override
     protected void bindEvent(View contentView) {
-        tvStorage.setOnClickListener(this);
+//        tvStorage.setOnClickListener(this);
         tvBind.setOnClickListener(this);
     }
 
@@ -85,9 +86,9 @@ public class LoginActivity extends BaseActivity {
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.storage_name:
-                getFactoryData();
-                break;
+//            case R.id.storage_name:
+//                getFactoryData();
+//                break;
             case R.id.login_binding:
                 checkLogin();
                 break;
@@ -156,15 +157,21 @@ public class LoginActivity extends BaseActivity {
     };
 
     private void checkLogin() {
-        String storage = tvStorage.getText().toString();
+//        String storage = tvStorage.getText().toString();
         key = etKey.getText().toString();
-        factoryID = factoryBean.getID();
-        if (TextUtils.isEmpty(storage)) {
-            ToastUtil.showSingleToast(getString(R.string.login_storage_hint), Toast.LENGTH_SHORT);
-        } else if (TextUtils.isEmpty(key)) {
+//        factoryID = factoryBean.getID();
+//        if (TextUtils.isEmpty(storage)) {
+//            ToastUtil.showSingleToast(getString(R.string.login_storage_hint), Toast.LENGTH_SHORT);
+//        } else if (TextUtils.isEmpty(key)) {
+//            ToastUtil.showSingleToast(getString(R.string.login_key_hint), Toast.LENGTH_SHORT);
+//        } else if (!factoryBean.getRegCode().equals(key)) {
+//            ToastUtil.showSingleToast(getString(R.string.login_key_error), Toast.LENGTH_SHORT);
+//        } else {
+//            binding();
+//        }
+
+        if (TextUtils.isEmpty(key)) {
             ToastUtil.showSingleToast(getString(R.string.login_key_hint), Toast.LENGTH_SHORT);
-        } else if (!factoryBean.getRegCode().equals(key)) {
-            ToastUtil.showSingleToast(getString(R.string.login_key_error), Toast.LENGTH_SHORT);
         } else {
             binding();
         }
@@ -186,9 +193,16 @@ public class LoginActivity extends BaseActivity {
             HttpModel.getInstance().binding("userBunding", phoneCode, key, factoryID, new HttpCallback(this) {
                 @Override
                 public void onSuccessStr(HttpResult httpResult) {
-                    SharedPreferencesManager.saveUser(factoryBean.getFactoryName());
-                    SharedPreferencesManager.saveCode(factoryBean.getRegCode());
-                    startActivity(MainActivity.class, true);
+                    try {
+                        JSONObject jsonObject = new JSONObject(httpResult.getActualResult1());
+                        Gson gson = new Gson();
+                        FactoryBean factory = gson.fromJson(jsonObject.toString(), FactoryBean.class);
+                        SharedPreferencesManager.saveUser(factory.getFactoryName());
+                        SharedPreferencesManager.saveCode(factory.getRegCode());
+                        startActivity(MainActivity.class, true);
+                    } catch (Exception e) {
+                        LogUtil.d("LoginActivity", "...onSuccessStr... exception:" + e);
+                    }
                 }
             });
         }

@@ -106,7 +106,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/view_margin_10"
+        android:layout_marginTop="@dimen/view_margin_6"
         android:background="@color/colorWhite"
         android:padding="@dimen/view_margin_10">
 
@@ -171,7 +171,7 @@
         android:id="@+id/report_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/view_margin_10"
+        android:layout_marginTop="@dimen/view_margin_6"
         android:divider="@null"
         android:overScrollMode="never"
         android:scrollbars="none" />

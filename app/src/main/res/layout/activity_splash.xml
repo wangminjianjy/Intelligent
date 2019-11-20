@@ -4,7 +4,7 @@
     android:id="@+id/img_splash"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorNormal"
+    android:background="@drawable/splash"
     android:orientation="vertical"
     tools:context=".ui.login.SplashActivity">
 
@@ -20,23 +20,24 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/view_margin_100"
         android:orientation="vertical">
 
         <ImageView
+            android:tint="@color/colorNormal"
             android:layout_width="@dimen/view_height_150"
             android:layout_height="@dimen/view_height_150"
             android:layout_gravity="center"
-            android:background="@drawable/logo" />
+            android:background="@drawable/splash_logo" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/view_margin_100"
+            android:layout_marginTop="@dimen/view_margin_20"
             android:gravity="center"
             android:text="@string/splash_title"
-            android:textColor="@color/color_half_white"
+            android:textColor="@color/colorWhite"
             android:textSize="@dimen/text_size_32" />
 
         <TextView
@@ -46,7 +47,37 @@
             android:layout_marginBottom="@dimen/view_margin_50"
             android:gravity="center"
             android:text="@string/splash_content"
-            android:textColor="@color/color_half_white"
-            android:textSize="@dimen/text_size_30" />
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_size_24" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/view_margin_30"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/splash_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_text_splash"
+            android:paddingLeft="@dimen/view_margin_15"
+            android:paddingTop="@dimen/view_margin_6"
+            android:paddingRight="@dimen/view_margin_15"
+            android:paddingBottom="@dimen/view_margin_6"
+            android:text="v 1.0.1"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_size_17" />
+
+        <!--        <TextView-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="@dimen/view_margin_20"-->
+        <!--            android:text="技术支持:山东省济南市"-->
+        <!--            android:textColor="@color/colorWhite"-->
+        <!--            android:textSize="@dimen/text_size_17" />-->
     </LinearLayout>
 </FrameLayout>

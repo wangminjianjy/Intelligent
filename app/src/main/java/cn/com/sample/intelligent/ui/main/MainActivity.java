@@ -21,6 +21,7 @@ public class MainActivity extends BaseActivity {
     private CustomViewPager mViewPager;
     private MainPagerAdapter mAdapter;
     private ControlFragment controlFragment;
+    private DeviceFragment deviceFragment;
     private ReportFragment reportFragment;
     private MyFragment myFragment;
 
@@ -66,10 +67,12 @@ public class MainActivity extends BaseActivity {
         mViewPager.setOffscreenPageLimit(2);
 
         controlFragment = ControlFragment.newInstance();
+        deviceFragment = DeviceFragment.newInstance();
         reportFragment = ReportFragment.newInstance();
         myFragment = MyFragment.newInstance();
 
-        fragments.add(controlFragment);
+        fragments.add(deviceFragment);
+//        fragments.add(controlFragment);
         btnItems.add(mControlARb);
         fragments.add(reportFragment);
         btnItems.add(mReportARb);
