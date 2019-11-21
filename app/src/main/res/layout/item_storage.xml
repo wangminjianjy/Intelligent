@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/color_null"
+    android:background="@color/colorNormal"
     android:orientation="vertical">
 
     <LinearLayout
@@ -15,15 +15,36 @@
         android:background="@drawable/shape_text"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/param_name"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/view_margin_15"
+            android:layout_height="match_parent"
             android:gravity="center"
-            android:text="实时参数"
-            android:textColor="@color/colorWhite"
-            android:textSize="@dimen/text_size_20" />
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/param_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="right"
+                android:padding="@dimen/view_margin_15"
+                android:text="实时参数"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_size_20" />
+
+            <TextView
+                android:id="@+id/storage_net"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/view_margin_5"
+                android:layout_weight="2"
+                android:drawableLeft="@drawable/data_alarm"
+                android:drawablePadding="@dimen/view_margin_6"
+                android:text="获取失败"
+                android:textColor="@color/colorAlarm"
+                android:textSize="@dimen/view_margin_15" />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -40,7 +61,6 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/view_margin_15"
                     android:text="当前温度:"
                     android:textColor="@color/colorWhite"
                     android:textSize="@dimen/text_size_17" />
@@ -105,8 +125,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="right"
-                    android:layout_marginTop="@dimen/view_margin_15">
+                    android:layout_gravity="right">
 
                     <TextView
                         android:id="@+id/param_wendu"

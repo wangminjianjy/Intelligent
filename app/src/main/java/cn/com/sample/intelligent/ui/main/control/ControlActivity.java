@@ -153,9 +153,13 @@ public class ControlActivity extends BaseActivity {
         storageBean = gson.fromJson(getIntent().getStringExtra(BaseConfig.PARAM_STORAGE), StorageBean.class);
         storageDataBean = gson.fromJson(getIntent().getStringExtra(BaseConfig.PARAM_STORAGE_DATA), StorageDataBean.class);
 
-        setStorageData();
-        setControlData();
-        setControlState();
+        if (storageBean != null) {
+            setControlData();
+        }
+        if (storageDataBean != null) {
+            setStorageData();
+            setControlState();
+        }
     }
 
     @Override

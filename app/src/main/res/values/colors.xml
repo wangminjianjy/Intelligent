@@ -21,6 +21,7 @@
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorWhite1">#E0E0E0</color>
     <color name="colorRed">#FF0000</color>
+    <color name="colorGreen">#00FF00</color>
     <color name="colorGray">#808080</color>
     <color name="colorTextGray">#666666</color>
     <color name="colorTextGray1">#999999</color>
@@ -36,5 +37,6 @@
     <color name="colorInputHint">#878787</color>
     <color name="colorTextHint">#EFEFEF</color>
     <color name="colorAlarm">#FD0717</color>
+    <color name="colorAlarmGreen">#0E932E</color>
     <color name="colorDividerDark">#CCCCCC</color>
 </resources>

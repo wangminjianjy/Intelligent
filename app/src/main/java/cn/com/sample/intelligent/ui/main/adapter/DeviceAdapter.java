@@ -61,6 +61,7 @@ public class DeviceAdapter extends BaseAdapter {
             convertView = layoutInflater.inflate(R.layout.item_storage, null);
             viewHolder = new DeviceAdapter.ViewHolder();
             viewHolder.name = convertView.findViewById(R.id.param_name);
+            viewHolder.net = convertView.findViewById(R.id.storage_net);
             viewHolder.wendu = convertView.findViewById(R.id.param_wendu);
             viewHolder.shidu = convertView.findViewById(R.id.param_rh);
             viewHolder.co2 = convertView.findViewById(R.id.param_co);
@@ -81,26 +82,29 @@ public class DeviceAdapter extends BaseAdapter {
             }
         });
 
-        if (storageList != null) {
+        if (storageList.get(position) != null) {
             viewHolder.name.setText(storageList.get(position).getStorageRoomName());
         }
         StorageDataBean storageDataBean = mList.get(position);
-        if (storageDataBean != null) {
-            if (storageDataBean.getDataInfo() != null) {
-                viewHolder.wendu.setText(storageDataBean.getDataInfo().getDangQianWenDu());
-                viewHolder.shidu.setText(storageDataBean.getDataInfo().getDangQianShiDu());
-                viewHolder.co2.setText(storageDataBean.getDataInfo().getErYangHuaTan());
-                viewHolder.zhiliang.setText(storageDataBean.getDataInfo().getKongQiZhiLiang());
-                viewHolder.jiaquan.setText(storageDataBean.getDataInfo().getJiaQuan());
-                viewHolder.ben.setText(storageDataBean.getDataInfo().getBen());
-                viewHolder.pm.setText(storageDataBean.getDataInfo().getPM25());
-            }
+        if (storageDataBean != null && storageDataBean.getDataInfo() != null) {
+            viewHolder.wendu.setText(storageDataBean.getDataInfo().getDangQianWenDu());
+            viewHolder.shidu.setText(storageDataBean.getDataInfo().getDangQianShiDu());
+            viewHolder.co2.setText(storageDataBean.getDataInfo().getErYangHuaTan());
+            viewHolder.zhiliang.setText(storageDataBean.getDataInfo().getKongQiZhiLiang());
+            viewHolder.jiaquan.setText(storageDataBean.getDataInfo().getJiaQuan());
+            viewHolder.ben.setText(storageDataBean.getDataInfo().getBen());
+            viewHolder.pm.setText(storageDataBean.getDataInfo().getPM25());
+        } else {
+            viewHolder.net.setText("暂无数据");
+            viewHolder.net.setTextColor(viewHolder.net.getResources().getColor(R.color.colorAlarm));
+            viewHolder.net.setCompoundDrawablesWithIntrinsicBounds(mContext.getResources().getDrawable(R.drawable.data_alarm), null, null, null);
         }
         return convertView;
     }
 
     class ViewHolder {
         TextView name;
+        TextView net;
         TextView wendu;
         TextView shidu;
         TextView co2;

@@ -20,6 +20,7 @@ import java.util.List;
 import cn.com.sample.intelligent.R;
 import cn.com.sample.intelligent.base.BaseConfig;
 import cn.com.sample.intelligent.base.BaseFragment;
+import cn.com.sample.intelligent.base.CustomApplication;
 import cn.com.sample.intelligent.base.okhttp.WebSocketManage;
 import cn.com.sample.intelligent.base.okhttp.callback.WebSocketCallBack;
 import cn.com.sample.intelligent.bean.StorageBean;
@@ -30,7 +31,6 @@ import cn.com.sample.intelligent.net.websocket.WebSocketMsg;
 import cn.com.sample.intelligent.ui.main.adapter.DeviceAdapter;
 import cn.com.sample.intelligent.ui.main.control.ControlActivity;
 import cn.com.sample.intelligent.util.AppUtil;
-import cn.com.sample.intelligent.util.ListAlert.AlertListUtil;
 import cn.com.sample.intelligent.util.ProgressUtil;
 import cn.com.sample.intelligent.util.ToastUtil;
 import okhttp3.Response;
@@ -42,6 +42,7 @@ public class DeviceFragment extends BaseFragment {
     private TextView controlBack;
     private TextView controlTitle;
     private TextView controlAction;
+    private View llNoService;
     private ListView deviceView;
 
     private List<StorageBean> storageList;
@@ -68,6 +69,7 @@ public class DeviceFragment extends BaseFragment {
         controlBack = contentView.findViewById(R.id.custom_back);
         controlTitle = contentView.findViewById(R.id.custom_title);
         controlAction = contentView.findViewById(R.id.custom_action);
+        llNoService = contentView.findViewById(R.id.ll_no_socket);
         deviceView = contentView.findViewById(R.id.device_list);
     }
 
@@ -106,21 +108,19 @@ public class DeviceFragment extends BaseFragment {
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.custom_action:
-                getStorageData();
-                break;
-            default:
-                break;
+        if (v.getId() == R.id.custom_action) {
+            getStorageData();
         }
     }
 
     private void getStorageData() {
         storageList.clear();
+        deviceList.clear();
+        llNoService.setVisibility(View.GONE);
         WebSocketManage.getInstance().openConnect(new WebSocketCallBack() {
             @Override
             public void onOpen(WebSocket webSocket, Response response) {
-                progressUtil.showProgress(getActivity(), getActivity().getString(R.string.hint_socket_get), false);
+                progressUtil.showProgress(getActivity(), CustomApplication.getContext().getString(R.string.hint_socket_get), false);
                 WebSocketMsg msg = new WebSocketMsg();
                 msg.setHead("" + WebSocketEnum.LogIn);
                 msg.setType("0");
@@ -154,7 +154,6 @@ public class DeviceFragment extends BaseFragment {
                                 storageList.add(storage);
                             }
                             dataNum = 0;
-                            deviceList.clear();
                             setStorageData();
                         }
                     } catch (JSONException e) {
@@ -162,6 +161,7 @@ public class DeviceFragment extends BaseFragment {
                     }
                 } else {
                     ToastUtil.showSingleToast(socketMsg.getData(), Toast.LENGTH_SHORT);
+                    llNoService.setVisibility(View.VISIBLE);
                 }
             }
 
@@ -192,7 +192,7 @@ public class DeviceFragment extends BaseFragment {
             WebSocketManage.getInstance().openConnect(new WebSocketCallBack() {
                 @Override
                 public void onOpen(WebSocket webSocket, Response response) {
-                    progressUtil.showProgress(getActivity(), getActivity().getString(R.string.hint_socket_get), false);
+                    progressUtil.showProgress(getActivity(), CustomApplication.getContext().getString(R.string.hint_socket_get), false);
                     WebSocketMsg msg = new WebSocketMsg();
                     msg.setHead("" + WebSocketEnum.LogIn);
                     msg.setType("0");
